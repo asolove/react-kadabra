@@ -290,11 +290,9 @@ class Autocomplete extends Component {
   //////////////////////////// BUTTON
 
   buttonKeyDownHandlers = {
-    ArrowDown: this.keyDownHandlers.ArrowDown,
+    ...this.keyDownHandlers,
 
-    ArrowUp: this.keyDownHandlers.ArrowUp,
-
-    Enter(event) {
+    ' '(event) {
       event.preventDefault()
       if (this.state.isOpen) {
         if (this.state.highlightedIndex === null) {
@@ -305,11 +303,6 @@ class Autocomplete extends Component {
       } else {
         this.openMenu()
       }
-    },
-
-    ' '(event) {
-      event.preventDefault()
-      this.toggleMenu()
     },
   }
 
