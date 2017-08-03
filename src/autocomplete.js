@@ -181,10 +181,11 @@ class Autocomplete extends Component {
   getControllerStateAndHelpers() {
     const {highlightedIndex, inputValue, isOpen, value} = this.state
     const {
+      getRootProps,
       getButtonProps,
       getInputProps,
       getItemProps,
-      getRootProps,
+      getItemFromIndex,
       openMenu,
       closeMenu,
       toggleMenu,
@@ -196,10 +197,11 @@ class Autocomplete extends Component {
     } = this
     return {
       // prop getters
+      getRootProps,
       getButtonProps,
       getInputProps,
       getItemProps,
-      getRootProps,
+      getItemFromIndex,
 
       // actions
       openMenu,
